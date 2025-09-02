@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: 'Aptifer Slab', serif;
+  background-color: #fdfaf4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* FONT */
+@font-face {
+  font-family: 'Aptifer Slab';
+  src: url('fonts/AptiferSlab-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Bagian atas */
+.atas {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+
+.atas img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  filter: brightness(80%);
+  object-position: bottom;
+}
+
+.atas-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #f8f3e6;
+}
+
+.atas .p-atas {
+  font-size: 58px;
+  font-family: Aptifer Slab, serif;
+  color: #ead7ad;
+  filter: brightness(90%);
+  text-shadow: 3px 3px 3px black;
+}
+
+.atas p {
+  font-size: 20px;
+  color: #f1e2c5;
+  text-shadow: 2px 2px 2px black;
+  margin-bottom: 50px;
+}
+
+.btn {
+  display: inline-block;
+  border: 2px solid #d4a373;
+  background-color: rgba(255, 255, 255, 0.405);
+  padding: 12px 28px;
+  color: #f1e2c5;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 2px black;
+}
+
+.btn:hover {
+  background: #ffffffc2;
+  color: #fff;
+}

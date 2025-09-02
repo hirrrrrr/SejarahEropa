@@ -1,0 +1,251 @@
+body {
+  margin: 0;
+  width: auto;
+    font-family: 'Aptifer Slab', serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'Aptifer Slab';
+  src: url('fonts/AptiferSlab-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.atas{
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+
+.atas img{
+  width: 100%;
+  height: 600px;
+  object-fit: cover; 
+  filter: brightness(70%);
+  object-position: bottom;
+}
+
+.atas-content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #f8f3e6;
+}
+
+.atas h1{
+  font-size: 50px;
+  font-family: Aptifer Slab, serif;
+  color: #ead7ad;
+  filter: brightness(90%);
+  text-shadow: 3px 3px 3px black;
+}
+
+.atas p{
+  font-size: 20px;
+  color:#f1e2c5;
+   text-shadow: 2px 2px 2px black;
+   margin-bottom: 70px;
+}
+
+.btn {
+  display: inline-block;
+  border: 2px solid #d4a373;
+  background-color: rgba(255, 255, 255, 0.405);
+  padding: 12px 28px;
+  color: #f1e2c5;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 2px black;
+}
+
+.btn:hover {
+  background: #d4a373;
+  color: #fff;
+}
+
+.tengah {
+  position: relative;
+  height: 350px;      
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+}
+
+/* Foto background */
+.tengah .bg-foto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       
+  filter: brightness(50%);  
+  z-index: -1;             
+}
+
+.timeline {
+  position: relative;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.timeline h2 {
+  font-size: 40px;
+  margin-bottom: 60px;
+  text-shadow: 2px 2px 4px black;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* List tahun */
+.timeline ul {
+  display: flex;
+  gap: 170px;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline li {
+  max-width: 200px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer; 
+}
+
+.timeline li:hover {
+  transform: scale(1.5); 
+  color: #ffd27f;       
+}
+
+.timeline li:hover .year {
+  color: #b67315;          
+}
+
+.timeline li:hover p {
+  color:#f1e2c5;           
+}
+
+.timeline h2:hover {
+  transform: scale(1.3);
+  color: #ead7ad;
+}
+
+.year {
+  font-size: 30px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px black;
+}
+
+.perjalanan {
+  position: relative;
+  background: url("img/portugis1.jpg") no-repeat top center/cover;
+  color: #f1e2c5;
+  padding: 60px 40px;
+  filter: brightness(80%);
+}
+
+.perjalanan .overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  text-align: left;
+  width: 300px;
+  margin-left: auto;
+  border-radius: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.perjalanan .overlay:hover {
+  transform: translateX(-30px) scale(1.19); 
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+.penper h2 {
+  font-size: 35px;
+  text-shadow: 2px 2px 4px black;
+}
+
+.penper p { 
+  font-size: 16px;
+}
+
+.dampak {
+  position: relative;
+  background: url("img/index-bawah.jpeg") no-repeat center center/cover;
+  filter: brightness(75%);
+  padding: 80px 40px;
+  text-align: center;
+  color: #d6991e;
+}
+
+.dampak h2 {
+  font-size: 50px;
+  margin-bottom: 40px;
+  text-shadow: 3px 3px 5px black;
+}
+
+.dampak .cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.dampak .card {
+  background: #c6a976;
+  padding: 30px 20px;
+  border-radius: 15px;
+  width: 250px;
+  color: #3b2a17;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.dampak .card i {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #3b2a17;
+}
+
+.dampak .card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.dampak .card p {
+  font-size: 16px;
+}
+
+.dampak .card:hover {
+  transform: translateY(-15px) scale(1.09);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.back-btn {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  background-color: rgba(255, 255, 255, 0.405);
+  color: #3b2a17;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.back-btn:hover {
+  padding: 12px 45px;  /* tombol jadi lebih panjang */
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}

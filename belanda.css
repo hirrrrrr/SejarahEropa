@@ -1,0 +1,239 @@
+body {
+  margin: 0;
+  font-family: 'Aptifer Slab', serif;
+  background-color: #fdfaf4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* FONT */
+@font-face {
+  font-family: 'Aptifer Slab';
+  src: url('fonts/AptiferSlab-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Bagian atas */
+.atas {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+
+.atas img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  filter: brightness(80%);
+  object-position: bottom;
+}
+
+.atas-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #f8f3e6;
+}
+
+.atas .p-atas {
+  font-size: 58px;
+  font-family: Aptifer Slab, serif;
+  color: #ead7ad;
+  filter: brightness(90%);
+  text-shadow: 3px 3px 3px black;
+}
+
+.atas p {
+  font-size: 20px;
+  color: #f1e2c5;
+  text-shadow: 2px 2px 2px black;
+  margin-bottom: 50px;
+}
+
+.btn {
+  display: inline-block;
+  border: 2px solid #d4a373;
+  background-color: rgba(255, 255, 255, 0.405);
+  padding: 12px 28px;
+  color: #f1e2c5;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 2px black;
+}
+
+.btn:hover {
+  background: #ffffffc2;
+  color: #fff;
+}
+
+/* Bagian tengah (timeline) */
+.tengah {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 60px 10%;
+  background: url("img/bg-belanda.jpg") no-repeat center center/cover;
+  position: relative;
+}
+
+/* Overlay gelap agar teks lebih jelas */
+.tengah::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 0;
+}
+
+.timeline, .content-box {
+  position: relative;
+  z-index: 1;
+}
+
+/* Timeline Kiri */
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background-color: #d4a373;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.dot:hover {
+  transform: scale(1.2);
+  background-color: #a86b2f;
+}
+
+.dot.active {
+  background-color: #8b5a2b;
+  transform: scale(1.3);
+}
+
+/* Garis timeline */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #c0a173;
+  z-index: -1;
+}
+
+/* Kotak konten kanan */
+/* Kotak konten kanan */
+.content-box {
+  flex: 1;
+  background: #fff5e6;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  min-height: 350px;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.content-box.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.content-box h2 {
+  margin-top: 0;
+  color: #a86b2f;
+}
+
+.content-box p {
+  line-height: 1.6;
+}
+
+    .dampak {
+  position: relative;
+  background: url("img/4.png") no-repeat center center/cover;
+  filter: brightness(75%);
+  padding: 80px 40px;
+  text-align: center;
+  color: #fed279;
+}
+
+.dampak h2 {
+  font-size: 55px;
+  margin-bottom: 45px;
+  text-shadow: 3px 3px 5px black;
+}
+
+.dampak .cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.dampak .card {
+  background: #c6a976;
+  padding: 30px 20px;
+  border-radius: 15px;
+  width: 250px;
+  color: #3b2a17;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.dampak .card i {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #3b2a17;
+}
+
+.dampak .card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.dampak .card p {
+  font-size: 16px;
+}
+
+.dampak .card:hover {
+  transform: translateY(-15px) scale(1.09);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.back-btn {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  background-color: rgba(255, 255, 255, 0.405);
+  color: #3b2a17;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.back-btn:hover {
+  padding: 12px 45px;  /* tombol jadi lebih panjang */
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}
