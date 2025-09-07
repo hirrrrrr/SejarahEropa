@@ -1,14 +1,12 @@
-body {
+/* Reset dasar */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Aptifer Slab', serif;
-  background-color: #fdfaf4;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-/* FONT */
+/* Import font custom */
 @font-face {
   font-family: 'Aptifer Slab';
   src: url('fonts/AptiferSlab-Regular.ttf') format('truetype');
@@ -16,58 +14,248 @@ html {
   font-style: normal;
 }
 
-/* Bagian atas */
-.atas {
+/* Background full halaman */
+body {
+  background: url("img/inggris1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #f9f9f9;   /* teks putih biar kontras */
+  padding: 40px;
+  min-height: 100vh;
   position: relative;
-  height: 500px;
-  overflow: hidden;
 }
 
-.atas img {
+/* Overlay gelap */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 600px;
-  object-fit: cover;
-  filter: brightness(80%);
-  object-position: bottom;
+  height: 100%;
+  background: rgba(0,0,0,0.6); /* ubah 0.6 sesuai tingkat kegelapan */
+  z-index: -1;
 }
 
-.atas-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #f8f3e6;
+/* Bagian Atas */
+.atas {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap; /* responsif */
+  padding: 20px 0;
 }
 
-.atas .p-atas {
-  font-size: 58px;
-  font-family: Aptifer Slab, serif;
-  color: #ead7ad;
-  filter: brightness(90%);
-  text-shadow: 3px 3px 3px black;
+/* Kotak gambar kiri */
+.atas-img {
+  flex: 0 0 280px; /* lebar fix */
 }
 
-.atas p {
-  font-size: 20px;
-  color: #f1e2c5;
-  text-shadow: 2px 2px 2px black;
-  margin-bottom: 50px;
+.atas-img img {
+  width: 100%;
+  height: 320px;          /* tinggi fix */
+  object-fit: cover;      /* isi penuh kotak */
+  object-position: left;  /* tampilkan bagian kiri gambar */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
+
+.atas-text {
+  flex: 1;
+  min-width: 250px;
+  color: #fff;
+}
+
+.atas-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.atas-text p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
 
 .btn {
   display: inline-block;
-  border: 2px solid #d4a373;
-  background-color: rgba(255, 255, 255, 0.405);
-  padding: 12px 28px;
-  color: #f1e2c5;
+  padding: 12px 24px;
+  background: #d6b07c;
+  color: #3b2a1a;
+
   text-decoration: none;
-  border-radius: 30px;
-  transition: all 0.3s ease;
-  text-shadow: 1px 1px 2px black;
+  border-radius: 3px;
+  font-weight: bold;
+  transition: 0.3s ease;
 }
 
 .btn:hover {
-  background: #ffffffc2;
-  color: #fff;
+  background: #c29a61;
+  transform: scale(1.05); /* tombol membesar sedikit */
 }
+
+.timeline-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 20px 0;
+
+  background-size: cover;
+  filter: brightness(85%);
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #68421d;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  width: 50%;
+  padding: 20px;
+  position: relative;
+}
+
+.timeline-item.left {
+  left: 10.5%;
+  text-align: center;
+  transform: translateX(-10px); 
+}
+
+.timeline-item.right {
+  left: 40%;
+  text-align: center;
+  transform: translateX(-30px); 
+}
+
+.timeline-card {
+  display: inline-block;
+  max-width: 420px;
+  background: rgba(174, 151, 108, 0.95);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  animation: float 4s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* tanda bisa di-hover */
+}
+
+.timeline-card:hover {
+  transform: scale(1.5); /* membesar 5% */
+  box-shadow: 10px 10px 20px rgba(0,0,0,0.4);
+}
+
+
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 10px;
+  }
+
+  .timeline-item,
+  .timeline-item.right,
+  .timeline-item.left {
+    width: 100%;
+    left: 0;
+    text-align: left;
+    padding-left: 50px;
+    transform: none; /* reset geser di mobile */
+  }
+
+  .timeline-card {
+    max-width: 100%;
+  }
+}
+
+.dampak {
+  position: relative;
+  filter: brightness(75%);
+  padding: 80px 40px;
+  text-align: center;
+  color: #d6991e;
+}
+.dampak::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.277); /* kotak hitam transparan */
+  border-radius: 12px;
+  z-index: -1;
+}
+
+.dampak h2 {
+  font-size: 50px;
+  margin-bottom: 40px;
+  text-shadow: 3px 3px 5px black;
+}
+
+.dampak .cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.dampak .card {
+  background: #c6a976;
+  padding: 30px 20px;
+  border-radius: 15px;
+  width: 250px;
+  color: #3b2a17;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.dampak .card i {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #3b2a17;
+}
+
+.dampak .card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.dampak .card p {
+  font-size: 16px;
+}
+
+.dampak .card:hover {
+  transform: translateY(-15px) scale(1.09);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.back-btn {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  background-color: rgba(255, 255, 255, 0.405);
+  color: #3b2a17;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.back-btn:hover {
+  padding: 12px 45px;  /* tombol jadi lebih panjang */
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}
+
