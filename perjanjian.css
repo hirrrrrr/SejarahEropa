@@ -1,0 +1,221 @@
+body {
+  margin: 0;
+  width: auto;
+  font-family: 'Aptifer Slab', serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'Aptifer Slab';
+  src: url('fonts/AptiferSlab-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Hero */
+.hero {
+  height: 60vh;
+  background: url("img/perjanjian.jpg") no-repeat center center/cover; /* Ganti foto background hero */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero-text {
+  position: relative;
+  color: #fff;
+  z-index: 1;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+/* Isi Perjanjian */
+.isi {
+  padding: 60px 10%;
+  text-align: center;
+  background-image: url(img/1.png);
+}
+
+.isi h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.isi-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.isi-card {
+  position: relative;
+  width: 420px;   /* lebih besar */
+  height: 300px;  /* lebih besar */
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+
+.isi-card:hover {
+  transform: translateY(-12px);
+}
+
+/* Tampilan awal (judul) */
+.card-front {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: url("img/card.jpeg") no-repeat center center/cover; /* Ganti foto default background card */
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+  z-index: 1;
+  transition: opacity 0.4s ease;
+  filter: brightness(80%);
+}
+
+/* Overlay (foto + teks) */
+.card-overlay {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%; height: 100%;
+  z-index: 2;
+  transition: top 0.4s ease;
+}
+
+.card-overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(55%);
+}
+
+.overlay-text {
+  position: absolute;
+  top: 60%; left: 30%;
+  transform: translate(-20%, -50%);
+  color: #ffffff;
+  text-align: top;
+  padding: 6px;
+}
+
+.overlay-text h3 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.overlay-text p {
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* Hover effect */
+.isi-card:hover .card-overlay {
+  top: 0;
+}
+
+.isi-card:hover .card-front {
+  opacity: 0;
+}
+
+/* Dampak */
+.dampak {
+  position: relative;
+  background: url("img/1.png") no-repeat center center/cover;
+  filter: brightness(75%);
+  padding: 80px 40px;
+  text-align: center;
+  color: #d6991e;
+}
+
+.dampak h2 {
+  font-size: 50px;
+  margin-bottom: 40px;
+  text-shadow: 3px 3px 5px black;
+}
+
+.dampak .cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.dampak .card {
+  background: #c6a976;
+  padding: 30px 20px;
+  border-radius: 15px;
+  width: 250px;
+  color: #3b2a17;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.dampak .card i {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #3b2a17;
+}
+
+.dampak .card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.dampak .card p {
+  font-size: 16px;
+}
+
+.dampak .card:hover {
+  transform: translateY(-15px) scale(1.09);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.back-btn {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  background-color: rgba(255, 255, 255, 0.405);
+  color: #3b2a17;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.back-btn:hover {
+  padding: 12px 45px;  /* tombol jadi lebih panjang */
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}
