@@ -1,7 +1,6 @@
 body {
   margin: 0;
   width: auto;
-  font-family: 'Aptifer Slab', serif;
 }
 
 html {
@@ -14,144 +13,252 @@ html {
   font-weight: normal;
   font-style: normal;
 }
-/* Hero */
-.hero {
-  height: 60vh;
-  background: url("img/perjanjian.jpg") no-repeat center center/cover; /* Ganti foto background hero */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+
+.atas{
   position: relative;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.4);
-}
-
-.hero-text {
-  position: relative;
-  color: #fff;
-  z-index: 1;
-}
-
-.hero-text h1 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-}
-
-.hero-text p {
-  font-size: 1.2rem;
-}
-
-/* Isi Perjanjian */
-.isi {
-  padding: 60px 10%;
-  text-align: center;
-  background-image: url(img/1.png);
-}
-
-.isi h2 {
-  font-size: 2rem;
-  margin-bottom: 40px;
-}
-
-.isi-container {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.isi-card {
-  position: relative;
-  width: 420px;   /* lebih besar */
-  height: 300px;  /* lebih besar */
-  background: #fff;
-  border-radius: 14px;
+  height: 500px;
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-  transition: transform 0.3s ease;
 }
 
-.isi-card:hover {
-  transform: translateY(-12px);
-}
-
-/* Tampilan awal (judul) */
-.card-front {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  background: url("img/card.jpeg") no-repeat center center/cover; /* Ganti foto default background card */
-  color: #fff;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-  z-index: 1;
-  transition: opacity 0.4s ease;
-  filter: brightness(80%);
-}
-
-/* Overlay (foto + teks) */
-.card-overlay {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%; height: 100%;
-  z-index: 2;
-  transition: top 0.4s ease;
-}
-
-.card-overlay img {
+.atas img{
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(55%);
+  height: 600px;
+  object-fit: cover; 
+  filter: brightness(70%);
+  object-position: bottom;
 }
 
-.overlay-text {
+.atas-content{
   position: absolute;
-  top: 50%; left: 30%;
-  transform: translate(-20%, -50%);
-  color: #ffffff;
-  text-align: top;
-  padding: 6px;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #f8f3e6;
+}
+.atas .p-atas
+{
+  font-size: 58px;
+  font-family: Aptifer Slab, serif;
+  color: #ead7ad;
+  filter: brightness(90%);
+  text-shadow: 3px 3px 3px black;
 }
 
-.overlay-text h3 {
-  font-size: 1.3rem;
-  margin-bottom: 20px;
+.atas p{
+  font-size: 20px;
+  color:#f1e2c5;
+   text-shadow: 2px 2px 2px black;
+   margin-bottom: 50px;
 }
 
-.overlay-text p {
-  font-size: 16px;
-  line-height: 1;
+.btn {
+  display: inline-block;
+  border: 2px solid #d4a373;
+  background-color: rgba(255, 255, 255, 0.405);
+  padding: 12px 28px;
+  color: #f1e2c5;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 2px black;}
+
+.btn:hover {
+  background: #ffffffc2;
+  color: #fff;
 }
 
-/* Hover effect */
-.isi-card:hover .card-overlay {
+
+
+.timeline-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 20px 0;
+  background: url("img/inggris2.jpg") no-repeat center center; 
+  background-size: cover;
+  filter: brightness(85%);
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
   top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #5c3d1e;
+  transform: translateX(-50%);
 }
 
-.isi-card:hover .card-front {
-  opacity: 0;
+.timeline-item {
+  width: 50%;
+  padding: 20px;
+  position: relative;
 }
 
-/* Dampak */
+.timeline-item.left {
+  left: 10.5%;
+  text-align: center;
+  transform: translateX(-10px); 
+}
+
+.timeline-item.right {
+  left: 40%;
+  text-align: center;
+  transform: translateX(-30px); 
+}
+
+.timeline-card {
+  display: inline-block;
+  max-width: 420px;
+  background: rgba(255, 246, 229, 0.95);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  animation: float 4s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* tanda bisa di-hover */
+}
+
+.timeline-card:hover {
+  transform: scale(1.5); /* membesar 5% */
+  box-shadow: 10px 10px 20px rgba(0,0,0,0.4);
+}
+
+
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 10px;
+  }
+
+  .timeline-item,
+  .timeline-item.right,
+  .timeline-item.left {
+    width: 100%;
+    left: 0;
+    text-align: left;
+    padding-left: 40px;
+    transform: none; /* reset geser di mobile */
+  }
+
+  .timeline-card {
+    max-width: 100%;
+  }
+}
+
+ .journey-container {
+      width: 100%;
+      margin: auto;
+      text-align: center;
+      position: relative;
+    }
+
+    .journey-content{
+      background-image: url(img/3.png);
+      background-size: cover;       /* gambar menutup penuh */
+      background-position: center;  /* fokus di tengah */
+      background-repeat: no-repeat; /* tidak diulang */
+      padding: 40px 20px;     
+      filter: brightness(80%);      /* biar konten tidak terlalu mepet */ 
+    }
+
+    .journey-content h2{
+        font-size: 30px;
+        color: #63411f;
+    }
+
+    .journey-line {
+      position: relative;
+      height: 4px;
+      background: #000000;
+      margin: 100px 0 60px;
+    }
+
+    .journey-step {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      background: #a2784e;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .journey-step:hover {
+      transform: translateY(-50%) scale(1.3);
+      background: #493119;
+    }
+
+    .journey-card {
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%) scale(0);
+      width: 220px;
+      background: #fff7e6;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      text-align: left;
+      transition: transform 0.4s ease;
+      pointer-events: none;
+    }
+
+    .journey-step:hover .journey-card {
+      transform: translateX(-40%) scale(1);
+      pointer-events: auto;
+    }
+
+    .journey-card h4 {
+      margin: 0 0 6px;
+      font-size: 16px;
+      color: #5c3d1e;
+    }
+
+    .journey-card p {
+      margin: 0;
+      font-size: 14px;
+      color: #333;
+    }
+    
+    .journey-card img.journey-img {
+  display: block;
+  width: 100%;
+  height: 230px;
+  object-position: top;
+  object-fit: cover;
+  margin: 10px auto;
+  border-radius: 8px;   
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+
+.content {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.content h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+/* Bagian dampak */
 .dampak {
   position: relative;
-  background: url("img/1.png") no-repeat center center/cover;
+  background: url("img/2.png") no-repeat center center/cover;
   filter: brightness(75%);
-  padding: 80px 40px;
+  padding: 50px 40px;
   text-align: center;
   color: #d6991e;
 }
