@@ -52,24 +52,6 @@ html {
    margin-bottom: 50px;
 }
 
-.btn {
-  display: inline-block;
-  border: 2px solid #d4a373;
-  background-color: rgba(255, 255, 255, 0.405);
-  padding: 12px 28px;
-  color: #f1e2c5;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-  text-shadow: 1px 1px 2px black;}
-
-.btn:hover {
-  background: #ffffffc2;
-  color: #fff;
-}
-
-
-
 .timeline-container {
   position: relative;
   width: 100%;
@@ -117,11 +99,11 @@ html {
   box-shadow: 0 6px 12px rgba(0,0,0,0.3);
   animation: float 4s ease-in-out infinite;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer; /* tanda bisa di-hover */
+  cursor: pointer; 
 }
 
 .timeline-card:hover {
-  transform: scale(1.5); /* membesar 5% */
+  transform: scale(1.5); 
   box-shadow: 10px 10px 20px rgba(0,0,0,0.4);
 }
 
@@ -132,7 +114,6 @@ html {
   100% { transform: translateY(0px); }
 }
 
-/* Responsif */
 @media (max-width: 768px) {
   .timeline-line {
     left: 10px;
@@ -145,7 +126,7 @@ html {
     left: 0;
     text-align: left;
     padding-left: 40px;
-    transform: none; /* reset geser di mobile */
+    transform: none; 
   }
 
   .timeline-card {
@@ -163,7 +144,7 @@ html {
   margin-bottom: 15px;
 }
 
-/* Bagian dampak */
+/* dampak */
 .dampak {
   position: relative;
   background: url("img/2.png") no-repeat center center/cover;
@@ -232,7 +213,8 @@ html {
 }
 
 .back-btn:hover {
-  padding: 12px 45px;  /* tombol jadi lebih panjang */
+  padding: 12px 45px; 
   background: #ffffff;
   box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+
 }
