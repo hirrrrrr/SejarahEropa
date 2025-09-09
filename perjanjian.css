@@ -120,7 +120,7 @@ html {
 
 .overlay-text {
   position: absolute;
-  top: 60%; left: 30%;
+  top: 50%; left: 30%;
   transform: translate(-20%, -50%);
   color: #ffffff;
   text-align: top;
