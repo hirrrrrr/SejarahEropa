@@ -1,0 +1,238 @@
+body {
+  margin: 0;
+  width: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'Aptifer Slab';
+  src: url('fonts/AptiferSlab-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.atas{
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+
+.atas img{
+  width: 100%;
+  height: 600px;
+  object-fit: cover; 
+  filter: brightness(70%);
+  object-position: bottom;
+}
+
+.atas-content{
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #f8f3e6;
+}
+.atas .p-atas
+{
+  font-size: 58px;
+  font-family: Aptifer Slab, serif;
+  color: #ead7ad;
+  filter: brightness(90%);
+  text-shadow: 3px 3px 3px black;
+}
+
+.atas p{
+  font-size: 20px;
+  color:#f1e2c5;
+   text-shadow: 2px 2px 2px black;
+   margin-bottom: 50px;
+}
+
+.btn {
+  display: inline-block;
+  border: 2px solid #d4a373;
+  background-color: rgba(255, 255, 255, 0.405);
+  padding: 12px 28px;
+  color: #f1e2c5;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 2px black;}
+
+.btn:hover {
+  background: #ffffffc2;
+  color: #fff;
+}
+
+
+
+.timeline-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 20px 0;
+  background: url("img/inggris2.jpg") no-repeat center center; 
+  background-size: cover;
+  filter: brightness(85%);
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #5c3d1e;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  width: 50%;
+  padding: 20px;
+  position: relative;
+}
+
+.timeline-item.left {
+  left: 10.5%;
+  text-align: center;
+  transform: translateX(-10px); 
+}
+
+.timeline-item.right {
+  left: 40%;
+  text-align: center;
+  transform: translateX(-30px); 
+}
+
+.timeline-card {
+  display: inline-block;
+  max-width: 420px;
+  background: rgba(255, 246, 229, 0.95);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  animation: float 4s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* tanda bisa di-hover */
+}
+
+.timeline-card:hover {
+  transform: scale(1.5); /* membesar 5% */
+  box-shadow: 10px 10px 20px rgba(0,0,0,0.4);
+}
+
+
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 10px;
+  }
+
+  .timeline-item,
+  .timeline-item.right,
+  .timeline-item.left {
+    width: 100%;
+    left: 0;
+    text-align: left;
+    padding-left: 40px;
+    transform: none; /* reset geser di mobile */
+  }
+
+  .timeline-card {
+    max-width: 100%;
+  }
+}
+.content {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.content h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+/* Bagian dampak */
+.dampak {
+  position: relative;
+  background: url("img/2.png") no-repeat center center/cover;
+  filter: brightness(75%);
+  padding: 50px 40px;
+  text-align: center;
+  color: #d6991e;
+}
+
+.dampak h2 {
+  font-size: 50px;
+  margin-bottom: 40px;
+  text-shadow: 3px 3px 5px black;
+}
+
+.dampak .cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.dampak .card {
+  background: #c6a976;
+  padding: 30px 20px;
+  border-radius: 15px;
+  width: 250px;
+  color: #3b2a17;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.dampak .card i {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #3b2a17;
+}
+
+.dampak .card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.dampak .card p {
+  font-size: 16px;
+}
+
+.dampak .card:hover {
+  transform: translateY(-15px) scale(1.09);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.back-btn {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  background-color: rgba(255, 255, 255, 0.405);
+  color: #3b2a17;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.back-btn:hover {
+  padding: 12px 45px;  /* tombol jadi lebih panjang */
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}
