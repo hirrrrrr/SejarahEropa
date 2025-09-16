@@ -52,6 +52,24 @@ html {
    margin-bottom: 50px;
 }
 
+.btn {
+  display: inline-block;
+  border: 2px solid #d4a373;
+  background-color: rgba(255, 255, 255, 0.405);
+  padding: 12px 28px;
+  color: #f1e2c5;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 2px black;}
+
+.btn:hover {
+  background: #ffffffc2;
+  color: #fff;
+}
+
+
+
 .timeline-container {
   position: relative;
   width: 100%;
@@ -99,11 +117,11 @@ html {
   box-shadow: 0 6px 12px rgba(0,0,0,0.3);
   animation: float 4s ease-in-out infinite;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer; 
+  cursor: pointer; /* tanda bisa di-hover */
 }
 
 .timeline-card:hover {
-  transform: scale(1.5); 
+  transform: scale(1.5); /* membesar 5% */
   box-shadow: 10px 10px 20px rgba(0,0,0,0.4);
 }
 
@@ -114,6 +132,7 @@ html {
   100% { transform: translateY(0px); }
 }
 
+/* Responsif */
 @media (max-width: 768px) {
   .timeline-line {
     left: 10px;
@@ -126,13 +145,103 @@ html {
     left: 0;
     text-align: left;
     padding-left: 40px;
-    transform: none; 
+    transform: none; /* reset geser di mobile */
   }
 
   .timeline-card {
     max-width: 100%;
   }
 }
+
+ .journey-container {
+      width: 100%;
+      margin: auto;
+      text-align: center;
+      position: relative;
+    }
+
+    .journey-content{
+      background-image: url(img/3.png);
+      background-size: cover;       /* gambar menutup penuh */
+      background-position: center;  /* fokus di tengah */
+      background-repeat: no-repeat; /* tidak diulang */
+      padding: 40px 20px;     
+      filter: brightness(80%);      /* biar konten tidak terlalu mepet */ 
+    }
+
+    .journey-content h2{
+        font-size: 30px;
+        color: #63411f;
+    }
+
+    .journey-line {
+      position: relative;
+      height: 4px;
+      background: #000000;
+      margin: 100px 0 60px;
+    }
+
+    .journey-step {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      background: #a2784e;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .journey-step:hover {
+      transform: translateY(-50%) scale(1.3);
+      background: #493119;
+    }
+
+    .journey-card {
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%) scale(0);
+      width: 220px;
+      background: #fff7e6;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      text-align: left;
+      transition: transform 0.4s ease;
+      pointer-events: none;
+    }
+
+    .journey-step:hover .journey-card {
+      transform: translateX(-40%) scale(1);
+      pointer-events: auto;
+    }
+
+    .journey-card h4 {
+      margin: 0 0 6px;
+      font-size: 16px;
+      color: #5c3d1e;
+    }
+
+    .journey-card p {
+      margin: 0;
+      font-size: 14px;
+      color: #333;
+    }
+    
+    .journey-card img.journey-img {
+  display: block;
+  width: 100%;
+  height: 230px;
+  object-position: top;
+  object-fit: cover;
+  margin: 10px auto;
+  border-radius: 8px;   
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+
 .content {
   padding: 40px 20px;
   max-width: 900px;
@@ -144,7 +253,7 @@ html {
   margin-bottom: 15px;
 }
 
-/* dampak */
+/* Bagian dampak */
 .dampak {
   position: relative;
   background: url("img/2.png") no-repeat center center/cover;
@@ -213,8 +322,7 @@ html {
 }
 
 .back-btn:hover {
-  padding: 12px 45px; 
+  padding: 12px 45px;  /* tombol jadi lebih panjang */
   background: #ffffff;
   box-shadow: 0 6px 18px rgba(0,0,0,0.5);
-
 }
